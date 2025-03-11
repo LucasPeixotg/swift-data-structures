@@ -40,6 +40,31 @@ class SinglyLinkedList<T> : CustomStringConvertible {
             tail!.next = Node<T>(value: value)
             tail = tail!.next
         }
+        
+        size += 1
+    }
+    
+    func invert() {
+        tail = head
+        
+        var previous: Node<T>?
+        var current: Node<T>? = head
+        var helper: Node<T>?
+        
+        while current != nil {
+            helper = current?.next
+            current?.next = previous
+            previous = current
+            current = helper
+        }
+        
+        head = previous
+    }
+    
+    func clean() {
+        size = 0
+        head = nil
+        tail = nil
     }
     
     var description: String {
@@ -57,7 +82,7 @@ class SinglyLinkedList<T> : CustomStringConvertible {
 let list = SinglyLinkedList<Int>()
 
 func singlyLinkedListExample() {
-    var linkedList: SinglyLinkedList<Int>? = SinglyLinkedList<Int>()
+    let linkedList = SinglyLinkedList<Int>()
 
     print("Number of values to be added: ", terminator: "")
     guard let input = readLine(), let quant = Int(input) else {
@@ -73,12 +98,15 @@ func singlyLinkedListExample() {
             exit(1)
         }
         
-        linkedList!.append(value: number)
+        linkedList.append(value: number)
     }
 
     print("Created list: ")
-    print(linkedList!)
+    print(linkedList)
+    print("Inverted list: ")
+    linkedList.invert()
+    print(linkedList)
 
     print("All values must be freed: ")
-    linkedList = nil
+    linkedList.clean()
 }
