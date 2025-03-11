@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB29F3A12D80582800301CBD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29F3A02D80582800301CBD /* main.swift */; };
 		EB29F3A92D805B1F00301CBD /* singly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29F3A82D805B1F00301CBD /* singly.swift */; };
+		EB29F3AE2D80708700301CBD /* bst.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29F3AD2D80708700301CBD /* bst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		EB29F39D2D80582800301CBD /* swift-data-structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-data-structures"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB29F3A02D80582800301CBD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EB29F3A82D805B1F00301CBD /* singly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singly.swift; sourceTree = "<group>"; };
+		EB29F3AD2D80708700301CBD /* bst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		EB29F39F2D80582800301CBD /* swift-data-structures */ = {
 			isa = PBXGroup;
 			children = (
+				EB29F3AC2D80707500301CBD /* tree */,
 				EB29F3A72D805B0200301CBD /* linked-list */,
 				EB29F3A02D80582800301CBD /* main.swift */,
 			);
@@ -71,6 +74,14 @@
 				EB29F3A82D805B1F00301CBD /* singly.swift */,
 			);
 			path = "linked-list";
+			sourceTree = "<group>";
+		};
+		EB29F3AC2D80707500301CBD /* tree */ = {
+			isa = PBXGroup;
+			children = (
+				EB29F3AD2D80708700301CBD /* bst.swift */,
+			);
+			path = tree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +144,7 @@
 			files = (
 				EB29F3A12D80582800301CBD /* main.swift in Sources */,
 				EB29F3A92D805B1F00301CBD /* singly.swift in Sources */,
+				EB29F3AE2D80708700301CBD /* bst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

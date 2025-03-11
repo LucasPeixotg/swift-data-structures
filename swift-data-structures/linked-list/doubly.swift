@@ -3,6 +3,7 @@ import Foundation
 fileprivate class Node<T> {
     var value: T
     var next: Node<T>?
+    weak var parent: Node<T>?
 
     init(value: T, next: Node<T>?) {
         self.value = value
@@ -18,7 +19,7 @@ fileprivate class Node<T> {
     }
 }
 
-fileprivate class SinglyLinkedList<T> : CustomStringConvertible {
+fileprivate class DoublyLinkedList<T> : CustomStringConvertible {
     var head: Node<T>?
     var tail: Node<T>?
     var size: Int
@@ -78,6 +79,8 @@ fileprivate class SinglyLinkedList<T> : CustomStringConvertible {
     }
 }
 
+
+let list = SinglyLinkedList<Int>()
 
 func singlyLinkedListExample() {
     let linkedList = SinglyLinkedList<Int>()
