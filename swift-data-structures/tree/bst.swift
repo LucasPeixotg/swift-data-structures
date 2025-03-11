@@ -1,9 +1,9 @@
 import Foundation
 
-fileprivate class Node<T: Comparable> {
+fileprivate class 🌱<T: Comparable> {
     var value: T
-    var smaller: Node<T>?
-    var greater: Node<T>?
+    var smaller: 🌱<T>?
+    var greater: 🌱<T>?
     
     init(value: T) {
         self.value = value
@@ -14,16 +14,16 @@ fileprivate class Node<T: Comparable> {
     }
 }
 
-fileprivate class BST<T: Comparable> {
-    var root: Node<T>?
+fileprivate class 🌳<T: Comparable> {
+    var root: 🌱<T>?
     
     func append(value: T) {
         guard root != nil else {
-            root = Node<T>(value: value)
+            root = 🌱<T>(value: value)
             return
         }
         
-        var current: Node<T>? = root
+        var current: 🌱<T>? = root
         while current != nil {
             if current!.value == value {
                 return
@@ -33,19 +33,19 @@ fileprivate class BST<T: Comparable> {
                 if current?.greater != nil {
                     current = current!.greater
                 } else {
-                    current?.greater = Node<T>(value: value)
+                    current?.greater = 🌱<T>(value: value)
                 }
             } else {
                 if current?.smaller != nil {
                     current = current!.smaller
                 } else {
-                    current?.smaller = Node<T>(value: value)
+                    current?.smaller = 🌱<T>(value: value)
                 }
             }
         }
     }
     
-    private func recursiveSearch(current: Node<T>?, searched: T) -> Bool {
+    private func recursiveSearch(current: 🌱<T>?, searched: T) -> Bool {
         guard let current = current else {
             return false
         }
@@ -65,7 +65,7 @@ fileprivate class BST<T: Comparable> {
         return recursiveSearch(current: root, searched: value)
     }
     
-    private func recursivePrintInorder(current: Node<T>?) {
+    private func recursivePrintInorder(current: 🌱<T>?) {
         guard let current = current else {
             return
         }
@@ -86,8 +86,8 @@ fileprivate class BST<T: Comparable> {
 }
 
 
-func bstExample() {
-    let tree = BST<Int>()
+func 🧑‍🌾() {
+    let tree = 🌳<Int>()
 
     print("Number of values to be added: ", terminator: "")
     guard let input = readLine(), let quant = Int(input) else {
